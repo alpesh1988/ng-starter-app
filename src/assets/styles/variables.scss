@@ -1,0 +1,25 @@
+$link-color: #3498db;
+$dark-grey: #999;
+$light-grey: #ccc;
+$page-title-color: #66615b;
+$primary: #003a70;
+$dropdown-border-color: #6c757d;
+$dropdown-hover-bg-color: #dae0e5;
+
+$changed: #ffa726;
+$overwrite: #e6a23f;
+$accepted: #66bb6a;
+$exported: #26c6da;
+$audit:  #ef5350;
+$table-header-bg: #6c7ae0;
+$changed-tick: #9a9a9a;
+$pim-body-bg-color: #fff;
+
+$off-white-color: #f8f8f9;
+$pim-app-accent: #c20834;
+
+$btn-light: #d9d9d9;
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$pim-app-main-color: $primary;
+$pim-provider-merge-result-color: #b7dfb9;

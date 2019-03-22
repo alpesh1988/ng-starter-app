@@ -1,0 +1,310 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+$flag-icon-css-path: '~flag-icon-css/flags' !default;
+@import "~flag-icon-css/sass/flag-icon";
+@import "./variables.scss";
+
+body {
+  margin: 0;
+  
+  .pim-spinner {
+    .black-overlay,
+    .loading-text {
+      position: fixed !important;
+    }
+  }
+  
+  .pim-body-container {
+    background: none; 
+    margin: 1.5rem 2rem 8rem;
+  }
+
+  #pim-page-title {
+    color: $page-title-color;    
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  
+  .pim-tooltip {
+    background: $black;
+    border-radius: 4px;
+    font-size: 0.75rem;
+  }
+
+  .form-control:focus {
+    box-shadow: 0 0 0 0.1rem rgba(63, 81, 181, 0.25) !important;
+    outline: none;
+  }
+
+  .pim-sidebar-list-item {
+    outline: 0;
+
+    &:hover {
+      background: $pim-app-main-color;
+    }
+
+    &.active {
+      background: $pim-app-main-color;
+      color: $white;
+      outline: 0;
+
+      &:hover {
+        background: $pim-app-main-color;
+      }
+    }
+  }
+
+  #pim-sidebar-header {
+    background: $pim-app-main-color;
+  }
+  .pim-sidebar-close-btn {
+    background: $white;
+  }
+
+  table.pim-table  {
+    border: 1px solid rgba(0,0,0,.1);
+    width: 100%;
+
+    th.mat-header-cell {
+      background: $table-header-bg;
+      color: $white;
+      font-size: 1rem;
+
+      .mat-sort-header-arrow {
+        color: $white;
+      }
+    }
+
+    th.mat-header-cell, td.mat-cell {
+      padding-bottom: 0.5rem;
+      padding-left: 1rem;
+      padding-top: 0.5rem;
+    }
+
+    th.pim-column-right,
+    td.pim-column-right {
+      padding-right: 1rem;
+      text-align: right;
+    }
+
+    th.pim-column-right .mat-sort-header-container {
+      justify-content: flex-end;
+    }
+
+    th.pim-column-center,
+    td.pim-column-center {
+      text-align: center;
+    }
+
+    th.pim-column-center .mat-sort-header-container {
+      justify-content: center;
+    }
+  }
+
+  .pim-login-form mat-form-field {
+    display: block;
+  }
+
+  .pim-login-btn {
+    border-radius: 4px;
+    font-size: 1.125rem;
+    line-height: 3rem;
+    width: 100%;
+  }
+  
+  .pim-highlighted {
+    background: $pim-provider-merge-result-color;
+    color: $black;
+  }
+
+  .pim-overwrite-class.pim-highlighted {
+    background: $overwrite;
+    color: $black;
+  }
+  
+  .pim-legend {
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+    margin-left: 2rem;
+    padding: 0.275rem 0.5rem;
+  }
+
+  pre {
+    color: inherit !important;
+    display: inline-block !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .mat-error {
+    font-size: 0.875rem;
+  }
+
+  .pim-cursor-pointer {
+    cursor: pointer;
+  }
+
+  .pim-cursor-not-allowed {
+    cursor: not-allowed;
+  }
+
+  .pim-float-right {
+    float: right;
+  }
+
+  .pim-clear {
+    clear: both;
+  }
+
+  .pim-paginator-container {
+    border: 1px solid rgba(0,0,0,0.12) !important;
+  }
+
+  .btn + .btn {
+    margin-left: 0.5rem;
+  }
+
+  .pim-product-status {
+    border-radius: 4px;
+    color: $white;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .pim-product-status-CHANGED {
+    background: $changed;
+  }
+
+  .pim-product-status-OVERWRITE {
+    background: $overwrite;
+  }
+
+  .pim-product-status-ACCEPTED {
+    background: $accepted;
+  }
+
+  .pim-product-status-EXPORTED {
+    background: $exported;
+  }
+
+  .pim-product-status-AUDIT {
+    background: $audit;
+  }
+
+  mat-sidenav-content {
+    background: $pim-body-bg-color;
+  }
+
+  .pim-accept-button, 
+  .pim-manual-import-button {
+    background: $accepted;
+  }
+
+  .pim-export-button {
+    background: $exported;
+  }
+  button:focus {
+    box-shadow: none;
+    outline:0;
+  }
+  .pim-mt-1 {
+    margin-top: 1rem;
+  }
+  .pim-mb-1 {
+    margin-bottom: 1rem;
+  }
+  .pim-mb-half {
+    margin-bottom: 0.5rem;
+  }
+  .pim-pad {
+    padding: 1.5rem;
+  }
+  .pim-pos-rel {
+    position: relative;
+  }
+  .pim-mat-icon {
+    font-size: 2rem;
+    margin-right: 0.875rem;
+    margin-top: 0.225rem;
+    vertical-align: text-bottom;
+  }
+  .col-lg-2-4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .pim-alert-message {
+    padding: 1rem;
+    position: relative;
+  
+    div {
+      cursor: pointer;
+      position: absolute;
+      right: 2rem;
+      top: 0.925rem;
+    }
+    .pim-times-circle {
+      font-size: 1.5rem;
+    }
+  }
+  .pim-accepted-bg-color {
+    background: $accepted;
+  }
+
+  .pim-display-if {
+    display: inline-flex;
+  }
+
+  .pim-vertical-align-middle {
+    vertical-align: middle;
+  }
+
+  .pim-margin-r-5 {
+    margin-right: 0.5rem;
+  }
+  .pim-margin-r-1 {
+    margin-right: 1rem;
+  }
+
+  button.pim-mat-button {
+    outline: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .mat-header-cell  {
+    .mat-sort-header-container.mat-sort-header-sorted .mat-sort-header-arrow {
+      opacity: 1 !important;
+    }
+  }
+
+  @media only screen and (max-width: 992px){
+
+    .pim-dashboard-card-container + .pim-dashboard-card-container {
+      margin-top: 1rem;
+    }
+    #pimLanguagedropdownMenuButton {
+      margin-right: 0;
+    }
+    td {
+      word-break: break-all;
+    }
+    #pim-filter-container #selectFilterDropdown {
+      min-width: 130px;
+    }
+    .col-lg-2-4 {
+      flex: auto;
+      max-width: 100%;
+    }
+  }
+  .pim-mat-dialog-actions {
+    justify-content: flex-end;
+  }
+}
