@@ -9,7 +9,7 @@ $mat-pink: (
   200: #f48fb1,
   300: #f06292,
   400: #ec407a,
-  500: $pim-app-accent,
+  500: $real-app-accent,
   600: #d81b60,
   700: #c2185b,
   800: #ad1457,
@@ -36,9 +36,9 @@ $mat-pink: (
   )
 );
 
-$pim-app-primary: mat-palette($mat-blue-grey);
-$pim-app-accent:  mat-palette($mat-pink, 500, 900, A100);
-$pim-app-warn:    mat-palette($mat-deep-orange);
+$real-app-primary: mat-palette($mat-blue-grey);
+$real-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$real-app-warn:    mat-palette($mat-deep-orange);
 
-$pim-app-theme: mat-light-theme($pim-app-primary, $pim-app-accent, $pim-app-warn);
-@include angular-material-theme($pim-app-theme);
+$real-app-theme: mat-light-theme($real-app-primary, $real-app-accent, $real-app-warn);
+@include angular-material-theme($real-app-theme);

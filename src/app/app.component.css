@@ -1,0 +1,13 @@
+.real-sidenav-container {
+    height: 100vh;
+  }
+  .real-sidenav-container.mat-drawer-container {
+    background: none;
+  }
+  .real-sidebar-menu {
+    margin-left: 0.5rem;
+  }
+  .mat-list, .mat-nav-list,
+  .mat-selection-list {
+    padding-top: 1px;
+  }

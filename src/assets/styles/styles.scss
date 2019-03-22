@@ -6,25 +6,25 @@ $flag-icon-css-path: '~flag-icon-css/flags' !default;
 body {
   margin: 0;
   
-  .pim-spinner {
+  .real-spinner {
     .black-overlay,
     .loading-text {
       position: fixed !important;
     }
   }
   
-  .pim-body-container {
+  .real-body-container {
     background: none; 
     margin: 1.5rem 2rem 8rem;
   }
 
-  #pim-page-title {
+  #real-page-title {
     color: $page-title-color;    
     font-weight: 400;
     margin-bottom: 1rem;
   }
   
-  .pim-tooltip {
+  .real-tooltip {
     background: $black;
     border-radius: 4px;
     font-size: 0.75rem;
@@ -35,32 +35,32 @@ body {
     outline: none;
   }
 
-  .pim-sidebar-list-item {
+  .real-sidebar-list-item {
     outline: 0;
 
     &:hover {
-      background: $pim-app-main-color;
+      background: $real-app-main-color;
     }
 
     &.active {
-      background: $pim-app-main-color;
+      background: $real-app-main-color;
       color: $white;
       outline: 0;
 
       &:hover {
-        background: $pim-app-main-color;
+        background: $real-app-main-color;
       }
     }
   }
 
-  #pim-sidebar-header {
-    background: $pim-app-main-color;
+  #real-sidebar-header {
+    background: $real-app-main-color;
   }
-  .pim-sidebar-close-btn {
+  .real-sidebar-close-btn {
     background: $white;
   }
 
-  table.pim-table  {
+  table.real-table  {
     border: 1px solid rgba(0,0,0,.1);
     width: 100%;
 
@@ -80,48 +80,38 @@ body {
       padding-top: 0.5rem;
     }
 
-    th.pim-column-right,
-    td.pim-column-right {
+    th.real-column-right,
+    td.real-column-right {
       padding-right: 1rem;
       text-align: right;
     }
 
-    th.pim-column-right .mat-sort-header-container {
+    th.real-column-right .mat-sort-header-container {
       justify-content: flex-end;
     }
 
-    th.pim-column-center,
-    td.pim-column-center {
+    th.real-column-center,
+    td.real-column-center {
       text-align: center;
     }
 
-    th.pim-column-center .mat-sort-header-container {
+    th.real-column-center .mat-sort-header-container {
       justify-content: center;
     }
   }
 
-  .pim-login-form mat-form-field {
+  .real-login-form mat-form-field {
     display: block;
   }
 
-  .pim-login-btn {
+  .real-login-btn {
     border-radius: 4px;
     font-size: 1.125rem;
     line-height: 3rem;
     width: 100%;
   }
   
-  .pim-highlighted {
-    background: $pim-provider-merge-result-color;
-    color: $black;
-  }
-
-  .pim-overwrite-class.pim-highlighted {
-    background: $overwrite;
-    color: $black;
-  }
-  
-  .pim-legend {
+  .real-legend {
     border: 1px solid $light-grey;
     border-radius: 4px;
     margin-left: 2rem;
@@ -141,23 +131,7 @@ body {
     font-size: 0.875rem;
   }
 
-  .pim-cursor-pointer {
-    cursor: pointer;
-  }
-
-  .pim-cursor-not-allowed {
-    cursor: not-allowed;
-  }
-
-  .pim-float-right {
-    float: right;
-  }
-
-  .pim-clear {
-    clear: both;
-  }
-
-  .pim-paginator-container {
+  .real-paginator-container {
     border: 1px solid rgba(0,0,0,0.12) !important;
   }
 
@@ -165,80 +139,27 @@ body {
     margin-left: 0.5rem;
   }
 
-  .pim-product-status {
-    border-radius: 4px;
-    color: $white;
-    padding: 0.25rem 0.5rem;
-  }
-
-  .pim-product-status-CHANGED {
-    background: $changed;
-  }
-
-  .pim-product-status-OVERWRITE {
-    background: $overwrite;
-  }
-
-  .pim-product-status-ACCEPTED {
-    background: $accepted;
-  }
-
-  .pim-product-status-EXPORTED {
-    background: $exported;
-  }
-
-  .pim-product-status-AUDIT {
-    background: $audit;
+  mat-sidenav {
+    min-width: 220px;
   }
 
   mat-sidenav-content {
-    background: $pim-body-bg-color;
+    background: $real-body-bg-color;
   }
 
-  .pim-accept-button, 
-  .pim-manual-import-button {
-    background: $accepted;
-  }
-
-  .pim-export-button {
-    background: $exported;
-  }
   button:focus {
     box-shadow: none;
     outline:0;
   }
-  .pim-mt-1 {
-    margin-top: 1rem;
-  }
-  .pim-mb-1 {
-    margin-bottom: 1rem;
-  }
-  .pim-mb-half {
-    margin-bottom: 0.5rem;
-  }
-  .pim-pad {
-    padding: 1.5rem;
-  }
-  .pim-pos-rel {
-    position: relative;
-  }
-  .pim-mat-icon {
+
+  .real-mat-icon {
     font-size: 2rem;
     margin-right: 0.875rem;
     margin-top: 0.225rem;
     vertical-align: text-bottom;
   }
-  .col-lg-2-4 {
-    flex: 0 0 20%;
-    max-width: 20%;
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-
-  .pim-alert-message {
+  
+  .real-alert-message {
     padding: 1rem;
     position: relative;
   
@@ -248,30 +169,13 @@ body {
       right: 2rem;
       top: 0.925rem;
     }
-    .pim-times-circle {
+
+    .real-times-circle {
       font-size: 1.5rem;
     }
   }
-  .pim-accepted-bg-color {
-    background: $accepted;
-  }
-
-  .pim-display-if {
-    display: inline-flex;
-  }
-
-  .pim-vertical-align-middle {
-    vertical-align: middle;
-  }
-
-  .pim-margin-r-5 {
-    margin-right: 0.5rem;
-  }
-  .pim-margin-r-1 {
-    margin-right: 1rem;
-  }
-
-  button.pim-mat-button {
+  
+  button.real-mat-button {
     outline: none;
 
     &:focus {
@@ -285,26 +189,69 @@ body {
     }
   }
 
+  /* Starts here - Common classses that can be used across pages */
+  .real-cursor-pointer {
+    cursor: pointer;
+  }
+
+  .real-cursor-not-allowed {
+    cursor: not-allowed;
+  }
+
+  .real-float-right {
+    float: right;
+  }
+
+  .real-clear {
+    clear: both;
+  }
+
+  .real-mt-1 {
+    margin-top: 1rem;
+  }
+
+  .real-mb-1 {
+    margin-bottom: 1rem;
+  }
+
+  .real-mb-half {
+    margin-bottom: 0.5rem;
+  }
+
+  .real-mr-1 {
+    margin-right: 1rem;
+  }
+
+  .real-mr-half {
+    margin-right: 0.5rem;
+  }
+
+  .real-p-1-5 {
+    padding: 1.5rem;
+  }
+
+  .real-pos-rel {
+    position: relative;
+  }
+
+  .real-display-if {
+    display: inline-flex;
+  }
+
+  .real-vertical-align-middle {
+    vertical-align: middle;
+  }
+
+  /* Ends here - Common classses that can be used across pages */
+
   @media only screen and (max-width: 992px){
 
-    .pim-dashboard-card-container + .pim-dashboard-card-container {
-      margin-top: 1rem;
-    }
-    #pimLanguagedropdownMenuButton {
+    #realLanguagedropdownMenuButton {
       margin-right: 0;
     }
+
     td {
       word-break: break-all;
     }
-    #pim-filter-container #selectFilterDropdown {
-      min-width: 130px;
-    }
-    .col-lg-2-4 {
-      flex: auto;
-      max-width: 100%;
-    }
-  }
-  .pim-mat-dialog-actions {
-    justify-content: flex-end;
   }
 }

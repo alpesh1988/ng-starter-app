@@ -1,4 +1,9 @@
 {
-    "SITE_NAME": "NRS - Ng Real Starter",
-    "MAIN_DASHBOARD": "Dashboard"
+    "SITE_NAME": "Ng Real Starter",
+    "SITE_NAME_SHORT": "NRS",
+    "WELCOME_STARTER_MESSAGE": "Willkommen beim echten Starter mit Angular # (aktuell)",
+    "MAIN_DASHBOARD": "Dashboard",
+    "MAIN_DASHBOARD_TITLE": "Dashboard",
+    "DASHBOARD_1": "Dashboard 1",
+    "LOGOUT": "Logout"
 }
