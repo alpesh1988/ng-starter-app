@@ -49,4 +49,10 @@
 }
 .real-language-dropdown-menu {
   min-width: 1rem;
+
+  a {
+   &:active {
+    color: $white;
+   } 
+  }
 } 
