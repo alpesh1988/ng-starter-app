@@ -15,5 +15,6 @@ export const APP_CONSTANTS = {
         COUNTRY_FLAG_ICON_CLASSNAME: 'flag-icon-de',
         default: false
     }],
-    REAL_CURRENT_LANGUAGE: 'realCurrentLanguage'
+    REAL_CURRENT_LANGUAGE: 'realCurrentLanguage',
+    SHOW_SCROLL_TO_TOP_BUTTON_POSITION: 150
 };
