@@ -1,0 +1,81 @@
+real-sidebar {
+
+  .real-sidebar-container {
+    height: 100vh;
+    position: initial;
+  }
+
+  .real-sidebar-container.mat-drawer-container {
+    background: none;
+  }
+
+  .real-sidebar-menu {
+    margin-left: 0.5rem;
+  }
+
+  .mat-list, .mat-nav-list,
+  .mat-selection-list {
+    padding-top: 1px;
+  }
+
+  #real-scroll-to-top-btn {
+    bottom: 1rem;
+    border-radius: 20px;
+    background: #003a70;
+    border: 2px solid #003a70;
+    color: white;
+    cursor: pointer;
+    height: 40px;
+    position: fixed;
+    right: 3rem;
+    text-align: center;
+    width: 40px;
+    z-index: 100;
+  }
+
+  .real-scroll-to-top-icon {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-58%, -50%);
+    -webkit-transform: translate(-58%, -50%);
+    font-size: 2rem;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .real-sidebar-list-item {
+    outline: 0;
+
+    &:hover {
+      background: $real-app-main-color;
+    }
+
+    &.active {
+      background: $real-app-main-color;
+      color: $white;
+      outline: 0;
+
+      &:hover {
+        background: $real-app-main-color;
+      }
+    }
+  }
+
+  #real-sidebar-header {
+    background: $real-app-main-color;
+  }
+
+  .real-sidebar-close-btn {
+    background: $white;
+  }
+
+  mat-sidenav {
+    min-width: 220px;
+  }
+
+  mat-sidenav-content {
+    background: $real-body-bg-color;
+  }
+
+}
