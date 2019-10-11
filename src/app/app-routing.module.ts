@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { PageNotFoundComponent } from './not-found.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { APP_CONSTANTS } from './app.constant';
 
 const routes: Routes = [
   {
     path: '',
+    redirectTo: APP_CONSTANTS.PAGES.DASHBOARD.URL,
+    pathMatch: 'full'
+  },
+  {
+    path: APP_CONSTANTS.PAGES.DASHBOARD.URL,
     component: DashboardComponent
   },
   {
@@ -16,7 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { enableTracing: true, useHash: true })],
+  imports: [RouterModule.forRoot(routes, { enableTracing: false, useHash: false })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
