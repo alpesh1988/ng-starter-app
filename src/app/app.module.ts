@@ -2,70 +2,77 @@
  * Modules
  */
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
-import { MaterialModule } from './material.module';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgxSpinnerModule } from 'ngx-spinner';
+
+/**
+ *  Keycloak module
+ */
+
+import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+import { keycloakInitializer } from './app-keycloak-init';
+
 
 /**
  * Services
  */
 import { LanguageService } from './services/language.service';
+import { UserService } from './services/user.service';
 
 /**
  * Components
  */
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeaderComponent } from './header/header.component';
-import { PageNotFoundComponent } from './not-found.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { HeaderComponent } from './common/header/header.component';
+import { SidebarComponent } from './common/sidebar/sidebar.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { SharedModule } from './shared/shared.module';
 
 
 // AoT requires an exported function for factories
-export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader  {
-  return new TranslateHttpLoader(httpClient, '../assets/i18n/', '.json?cacheBuster=' + environment.cacheBusterHash);
+export function HttpLoaderFactory( httpClient: HttpClient ): TranslateHttpLoader {
+  return new TranslateHttpLoader( httpClient, '../assets/i18n/', '.json?cacheBuster=' + environment.cacheBusterHash );
 }
 
-@NgModule({
+@NgModule( {
   declarations: [
     AppComponent,
     DashboardComponent,
     HeaderComponent,
+    SidebarComponent,
     PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpModule,
+    KeycloakAngularModule,
     HttpClientModule,
-    MaterialModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     AppRoutingModule,
-    TranslateModule.forRoot({
-      loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-      }
-    }),
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    SharedModule
   ],
-  entryComponents: [
-  ],
+  entryComponents: [],
   providers: [
-    LanguageService
+    LanguageService,
+    UserService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: keycloakInitializer,
+      multi: true,
+      deps: [ KeycloakService ]
+    }
+
   ],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+  bootstrap: [ AppComponent ]
+} )
+export class AppModule {
+}

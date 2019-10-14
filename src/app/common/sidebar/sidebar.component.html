@@ -1,0 +1,52 @@
+<mat-sidenav-container class="real-sidebar-container">
+
+  <mat-sidenav #matSidenav mode="over" class="app-sidenav">
+    <mat-toolbar id="real-sidebar-header">
+      <!--future svg to go here-->
+      <span class="toolbar-filler"></span>
+      <button mat-icon-button (click)="toggleSidebar()"
+              class="mat-icon-button sidenav-toggle-button real-sidebar-close-btn">
+        <mat-icon aria-label="Menu" class="material-icons">close</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <!-- Navigation Items -->
+      <mat-list-item *ngFor="let item of navigationItems; let i = index;"
+                     role="listitem"
+                     class="real-sidebar-list-item"
+                     [ngClass]="{'active': activeNavItem === item}"
+                     (click)="navigateToPage(i)">
+        <mat-icon class="material-icons">{{item.icon}}</mat-icon>
+        <span class="real-sidebar-menu">{{ item.name | translate }}</span>
+
+      </mat-list-item>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content (scroll)="scrollHandler()">
+
+    <ngx-spinner
+      bdColor="rgba(51,51,51,0.8)"
+      size="default"
+      color="#fff"
+      type="pacman"
+      class="real-spinner">
+      <p style="font-size: 20px; color: white">Loading...</p>
+    </ngx-spinner>
+
+    <div class="real-body-container" currentLanguage="currentLanguage">
+      <router-outlet></router-outlet>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <a id="real-scroll-to-top-btn" *ngIf="showScrollToTopButton" (click)="scrollToTop()"
+       matTooltipPosition="above" matTooltipClass="tsm-tooltip" matTooltip="{{ 'SCROLL_TO_TOP' | translate }}">
+      <mat-icon aria-label="arrow_drop_up" class="material-icons real-scroll-to-top-icon">expand_less</mat-icon>
+    </a>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

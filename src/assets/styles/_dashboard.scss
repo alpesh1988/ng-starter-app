@@ -1,0 +1,69 @@
+real-dashboard {
+  h3 {
+    margin-top: 3rem;
+  }
+
+  table {
+    margin-top: 2rem;
+    width: 100%;
+
+    th.mat-header-cell, td.mat-cell {
+      padding: 0 1rem;
+
+      .mat-form-field {
+        width: calc(98% - 5rem);
+        button {
+          position: relative;
+          top: 1.5rem;
+        }
+      }
+
+      .configuration-update-button-open-dialog {
+        float: right;
+        position: relative;
+        top: 1.5rem;
+
+        button {
+          width: 5rem;
+        }
+      }
+    }
+
+    td.mat-cell {
+      vertical-align: text-top;
+    }
+
+    th.mat-header-cell:first-of-type, td.mat-cell:first-of-type {
+      width: 25%;
+    }
+  }
+
+  .table-actions {
+    float: right;
+  }
+
+  .table-loading-spinner-wrapper {
+    position: relative;
+    width: max-content;
+    width: -moz-max-content;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-25%, 300%);
+  }
+
+}
+
+.configuration-update-dialog {
+  mat-divider {
+    margin: 1rem 0;
+  }
+
+  &-actions {
+    float: right;
+
+    button {
+      margin-left: 0.5rem;
+    }
+  }
+}

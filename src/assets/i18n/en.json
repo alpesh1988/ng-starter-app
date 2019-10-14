@@ -1,10 +1,9 @@
 {
-    "SITE_NAME": "Ng Real Starter",
-    "SITE_NAME_SHORT": "NRS",
-    "WELCOME_STARTER_MESSAGE": "Welcome to real-starter using Angular #(latest)",
-    "MAIN_DASHBOARD": "Dashboard",
-    "MAIN_DASHBOARD_TITLE": "Dashboard",
-    "DASHBOARD_1": "Dashboard 1",
-    "LOGOUT": "Logout",
-    "SCROLL_TO_TOP": "Scroll to top"
+  "SITE_NAME": "Real Starter",
+  "SITE_NAME_SHORT": "Real Starter",
+  "DASHBOARD": "Dashboard",
+  "DASHBOARD_TITLE": "Welcome to Real Starter",
+  "PAGE_2": "Page 2",
+  "LOGOUT": "Logout",
+  "SCROLL_TO_TOP": "Scroll to top"
 }
