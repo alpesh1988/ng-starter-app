@@ -1,4 +1,4 @@
-# NgRealStarter
+# NgStarterApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 
@@ -31,10 +31,6 @@ $ npm start
 Navigate to `http://localhost:4200/` to see running app.
 
 The app will automatically reload if you change any of the source files.
-
-## Online demo
-
-https://ng-real-starter.surge.sh/#/
 
 ## Code scaffolding
 
