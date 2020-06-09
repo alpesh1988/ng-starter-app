@@ -1,6 +1,6 @@
 ## Demo
 
-If not installed, download it from http://ng-starter-app.surge.sh
+Starter app: http://ng-starter-app.surge.sh
 
 # NgStarterApp
 
