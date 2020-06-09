@@ -1,8 +1,8 @@
 {
-  "SITE_NAME": "Real Starter",
-  "SITE_NAME_SHORT": "Real Starter",
+  "SITE_NAME": "Angular starter",
+  "SITE_NAME_SHORT": "Angular starter",
   "DASHBOARD": "Dashboard",
-  "DASHBOARD_TITLE": "Welcome to Real Starter",
+  "DASHBOARD_TITLE": "Welcome to Angular starter",
   "PAGE_2": "Page 2",
   "LOGOUT": "Logout",
   "SCROLL_TO_TOP": "Scroll to top"

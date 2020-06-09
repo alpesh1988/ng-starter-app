@@ -1,6 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { KeycloakService } from 'keycloak-angular';
 import { APP_CONSTANTS } from '../../app.constant';
 import { LanguageService } from '../../services/language.service';
 
@@ -19,7 +18,6 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     public translate: TranslateService,
-    private keycloakService: KeycloakService,
     private languageService: LanguageService
   ) {
   }
@@ -46,7 +44,6 @@ export class HeaderComponent implements OnInit {
 
   public onLogout(): void {
     localStorage.removeItem( APP_CONSTANTS.REAL_CURRENT_LANGUAGE );
-    this.keycloakService.logout();
   }
 
   public setCurrentLanguage( language ): void {
