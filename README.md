@@ -1,3 +1,7 @@
+## Demo
+
+If not installed, download it from http://ng-starter-app.surge.sh
+
 # NgStarterApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
